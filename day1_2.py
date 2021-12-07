@@ -2,8 +2,7 @@ with open("input_day1") as f:
     data = [int(x) for x in f.readlines()]
 
 sums = []
-a,b,c,*d = data
-sums.append(a+b+c)
+b,c,*d = data
 
 while d:
   a,b,c,*d = [b, c] + d
