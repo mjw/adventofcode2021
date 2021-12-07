@@ -1,0 +1,13 @@
+with open("input_day1") as f:
+    data = [int(x) for x in f.readlines()]
+
+sums = []
+a,b,c,*d = data
+sums.append(a+b+c)
+
+while d:
+  a,b,c,*d = [b, c] + d
+  sums.append(a + b + c)
+
+print(sum([int(a < b) for (a, b) in zip(sums, sums[1:])]))
+
