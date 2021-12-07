@@ -4,7 +4,6 @@ class Submarine(cmd.Cmd):
     depth = 0
     horizontal = 0
     aim = 0
-    use_rawinput = False
 
     def do_forward(self, args):
         self.horizontal += int(args[0])
